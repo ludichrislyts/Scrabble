@@ -108,6 +108,23 @@
             //compare class function to correct anwser
             $this->assertEquals($answer, $result);
         }
+        //test seventh spec
+        function testSingleLetterSharedTenPoints()
+        {
+            //Arrange
+            $test = new Scrabble;
+            $input = "Q";
+
+            //Act
+            // result of class function
+            $result = $test->getScore($input);
+            // what the correct answer should be
+            $answer = 10;
+
+            //Assert
+            //compare class function to correct anwser
+            $this->assertEquals($answer, $result);
+        }
     }
 
 
