@@ -43,7 +43,7 @@
                     ++$valid_word;
                 }
                 else{
-                    $error_message = "You entered an invalid character";
+                    $error_message = "You entered an invalid character, please try again.";
                     return $error_message;
                 }
             }
@@ -58,7 +58,7 @@
             if ($valid_word > 1){
                 return $word_score;
             } else{
-                return "Word is not long enough to score in Scrabble";
+                return "Word is not long enough to score in Scrabble.";
             }
         }
     }

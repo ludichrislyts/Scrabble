@@ -5,13 +5,18 @@
     </head>
     <body>
         <div class="container">
-            <h1>Here's your score!</h1>
-            <h2>The word you entered is worth {{ score}} points in Scrabble</h2>
+            {% if score > 1 %}
+                <h1>Here's your score!</h1>
+                <h3>The word you entered is worth {{ score }} points in Scrabble</h3>
+            {% else %}
+                <h2>Ooops, you goofed up:</h2>
+                <h3>{{ error_message }}</h3>
+            {% endif %}
         </div>
         <div class="container">
             <p>
                 <a href="/">Try Another Word</a>
-            </p>            
+            </p>
         </div>
     </body>
 </html>

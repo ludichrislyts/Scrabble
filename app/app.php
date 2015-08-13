@@ -15,7 +15,11 @@
     $app->get("/score_results", function() use ($app){
         $scrabbler = new Scrabble;
         $scrabble_score = $scrabbler->getScore($_GET['word']);
-        return $app['twig']->render('score_results.html.twig', array('score' => $scrabble_score));
+        if (is_int($scrabble_score)){
+            return $app['twig']->render('score_results.html.twig', array('score' => $scrabble_score));
+        } else{
+            return $app['twig']->render('score_results.html.twig', array('error_message' => $scrabble_score));    
+        }
     });
 
     return $app;
