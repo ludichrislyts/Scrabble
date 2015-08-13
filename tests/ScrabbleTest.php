@@ -41,7 +41,7 @@
             $this->assertEquals($answer, $result);
         }
         //test third spec
-        function testSingleLetterSharedTwoPoint()
+        function testSingleLetterSharedTwoPoints()
         {
             //Arrange
             $test = new Scrabble;
@@ -52,6 +52,23 @@
             $result = $test->getScore($input);
             // what the correct answer should be
             $answer = 2;
+
+            //Assert
+            //compare class function to correct anwser
+            $this->assertEquals($answer, $result);
+        }
+        //test fourth spec
+        function testSingleLetterSharedThreePoints()
+        {
+            //Arrange
+            $test = new Scrabble;
+            $input = "B";
+
+            //Act
+            // result of class function
+            $result = $test->getScore($input);
+            // what the correct answer should be
+            $answer = 3;
 
             //Assert
             //compare class function to correct anwser
