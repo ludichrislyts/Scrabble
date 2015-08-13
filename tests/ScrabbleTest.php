@@ -74,6 +74,23 @@
             //compare class function to correct anwser
             $this->assertEquals($answer, $result);
         }
+        //test fifth spec
+        function testSingleLetterSharedFourPoints()
+        {
+            //Arrange
+            $test = new Scrabble;
+            $input = "F";
+
+            //Act
+            // result of class function
+            $result = $test->getScore($input);
+            // what the correct answer should be
+            $answer = 4;
+
+            //Assert
+            //compare class function to correct anwser
+            $this->assertEquals($answer, $result);
+        }
     }
 
 
