@@ -8,6 +8,8 @@ K                                  5
 J, X                               8
 Q, Z                               10
 
+cap test
+handle bad input
 1) Return score for one letter with a unique point value
     Input: K
     Output: 5
@@ -47,7 +49,7 @@ Q, Z                               10
 10) Return score for 3 letters with same value
     Input: SON
     Output: 3
-        
+
 11) Return score for 3 letters with different values
     Input: POD
     Output: 6
