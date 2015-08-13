@@ -142,6 +142,57 @@
             //compare class function to correct anwser
             $this->assertEquals($answer, $result);
         }
+        //test ninth spec
+        function testTwoLetterDifValue()
+        {
+            //Arrange
+            $test = new Scrabble;
+            $input = "DO";
+
+            //Act
+            // result of class function
+            $result = $test->getScore($input);
+            // what the correct answer should be
+            $answer = 3;
+
+            //Assert
+            //compare class function to correct anwser
+            $this->assertEquals($answer, $result);
+        }
+        //test tenth spec
+        function testThreeLetterSharedValue()
+        {
+            //Arrange
+            $test = new Scrabble;
+            $input = "SON";
+
+            //Act
+            // result of class function
+            $result = $test->getScore($input);
+            // what the correct answer should be
+            $answer = 3;
+
+            //Assert
+            //compare class function to correct anwser
+            $this->assertEquals($answer, $result);
+        }
+        //test eleventh spec
+        function testThreeLetterDifValue()
+        {
+            //Arrange
+            $test = new Scrabble;
+            $input = "POD";
+
+            //Act
+            // result of class function
+            $result = $test->getScore($input);
+            // what the correct answer should be
+            $answer = 6;
+
+            //Assert
+            //compare class function to correct anwser
+            $this->assertEquals($answer, $result);
+        }
     }
 
 
