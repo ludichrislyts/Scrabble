@@ -91,6 +91,23 @@
             //compare class function to correct anwser
             $this->assertEquals($answer, $result);
         }
+        //test sixth spec
+        function testSingleLetterSharedEightPoints()
+        {
+            //Arrange
+            $test = new Scrabble;
+            $input = "J";
+
+            //Act
+            // result of class function
+            $result = $test->getScore($input);
+            // what the correct answer should be
+            $answer = 8;
+
+            //Assert
+            //compare class function to correct anwser
+            $this->assertEquals($answer, $result);
+        }
     }
 
 
