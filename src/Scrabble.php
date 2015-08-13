@@ -32,10 +32,9 @@
             $letter_values = array("A" => 1, "E" => 1, "I" => 1, "O" => 1, "U" => 1, "L" => 1, "N" => 1, "R" => 1,
                     "S" => 1, "T" => 1, "D" => 2, "G" => 2, "B" => 3, "C" => 3, "M" => 3, "P" => 3, "F" => 4, "H" => 4,
                     "V" => 4, "W" => 4, "Y" => 4, "K" => 5, "J" => 8, "X" => 8, "Q" => 10, "Z" => 10);
-            var_dump($letter_values);
             $word_score = 0;
             $upper_string = strtoupper($input_string);
-            $input_string_array = explode('\n', $upper_string);
+            $input_string_array = str_split($upper_string);
             var_dump($input_string_array);
 
             foreach ($input_string_array as $letter){

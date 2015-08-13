@@ -125,6 +125,23 @@
             //compare class function to correct anwser
             $this->assertEquals($answer, $result);
         }
+        //test eigth spec
+        function testTwoLetterSharedValue()
+        {
+            //Arrange
+            $test = new Scrabble;
+            $input = "TO";
+
+            //Act
+            // result of class function
+            $result = $test->getScore($input);
+            // what the correct answer should be
+            $answer = 2;
+
+            //Assert
+            //compare class function to correct anwser
+            $this->assertEquals($answer, $result);
+        }
     }
 
 
