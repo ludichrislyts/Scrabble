@@ -9,15 +9,16 @@
             //Arrange
 
             $test = new Scrabble;
-            var_dump($test->letterValues);
+            var_dump($test->letter_values);
             $inputLetter = "A";
 
             //Act
 
             // result of class function
+            $input = "K";
             $result = $test->getScore($input);
             // what the correct answer should be
-            $answer = 1;
+            $answer = 5;
 
             //Assert
 
