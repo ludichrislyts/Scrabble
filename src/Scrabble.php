@@ -35,25 +35,31 @@
             $word_score = 0;
             $upper_string = strtoupper($input_string);
             $input_string_array = str_split($upper_string);
-            var_dump($input_string_array);
-
+            //var_dump($input_string_array);
+            $valid_word = 0;
             foreach ($input_string_array as $letter){
                 if (array_key_exists($letter, $letter_values)){
                     $word_score += $letter_values[$letter];
+                    ++$valid_word;
                 }
                 else{
-                    $error_message = "You entered an invalid character & word score = " . $word_score;
+                    $error_message = "You entered an invalid character";
                     return $error_message;
                 }
             }
+            //var_dump($valid_word);
             //$letters_to_score = explode(" ", strtoupper($inputString));
             //var_dump($letters_to_score);
             //$word_score = array_search($letters_to_score, $this->letter_values);
 
             //$word_score = array_search($input_string, $this->letter_values);
 
-
-            return $word_score;
+            //check if word length is at least 2 letters
+            if ($valid_word > 1){
+                return $word_score;
+            } else{
+                return "Word is not long enough to score in Scrabble";
+            }
         }
     }
  ?>
