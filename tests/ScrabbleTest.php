@@ -9,7 +9,7 @@
             //Arrange
 
             $test = new Scrabble;
-            var_dump($test->letter_values);
+
             $inputLetter = "A";
 
             //Act
