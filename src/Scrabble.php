@@ -12,21 +12,28 @@
             // $two_point_letters = array('D', 'G');
             // $three_point_letters = array('B', 'C', 'M', 'P');
             // $four_point_letters = array('F', 'H', 'V', 'W', 'Y');
-            $five_point_letters = array("K");
+            $five_point_letters = array("K" => 5);
             // $eight_point_letters = array("J", "X");
             // $ten_point_Letters = array("Q", "Z");
-            $this->letter_values = array_fill_keys($five_point_letters, 5);
+
+            array_push($this->letter_values, $five_point_letters);
 
             //BACKUP PLAN, MAKE EACH LETTER HAVE A VALUE SEPARATELY :-(
 
 
         }
 
-        function getScore($inputString)
+        function getScore($input_string)
         {
-            strtoupper($inputString);
+            $word_score = 0;
+            strtoupper($input_string);
+            //$letters_to_score = explode(" ", strtoupper($inputString));
+            //var_dump($letters_to_score);
+            //$word_score = array_search($letters_to_score, $this->letter_values);
+            $word_score = array_search($input_string, $this->letter_values);
 
-            return 0;
+
+            return $word_score;
         }
     }
  ?>

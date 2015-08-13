@@ -15,7 +15,7 @@
             //Act
 
             // result of class function
-            $input = "K";
+            $input = "k";
             $result = $test->getScore($input);
             // what the correct answer should be
             $answer = 5;
