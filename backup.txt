@@ -1,0 +1,89 @@
+<?php
+class Backup
+{
+    //array of key (number) value (letter) pairs
+    public $letter_values;
+
+    function __construct()
+    {
+        //TRYING TO MAKE A KEY VALUE ARRAY (FAILING)
+
+        $one_point_letters = array("A", "E", "I", "O", "U", "L", "N", "R", "S", "T");
+        $two_point_letters = array("D", "G");
+        $three_point_letters = array("B", "C", "M", "P");
+        $four_point_letters = array("F", "H", "V", "W", "Y");
+        $five_point_letters = array("K");
+        $eight_point_letters = array("J", "X");
+        $ten_point_letters = array("Q", "Z");
+        $letters_array = array($one_point_letters, $two_point_letters, $three_point_letters, $four_point_letters,
+            $five_point_letters, $eight_point_letters, $ten_point_letters);
+        // this is array([A=1][E=1][I=1][O=1]etc
+        // $one_point_letter_array = array_fill_keys($one_point_letters, 1);
+        // $two_point_letter_array = array_fill_keys($two_point_letters, 2);
+        // $three_point_letter_array = array_fill_keys($three_point_letters, 3);
+        // $four_point_letter_array = array_fill_keys($four_point_letters, 4);
+        // $five_point_letter_array = array_fill_keys($five_point_letters, 5);
+        // $eight_point_letter_array = array_fill_keys($eight_point_letters, 8);
+        // $ten_point_letter_array = array_fill_keys($ten_point_letters, 10);
+        // //put letter/point pair arrays into an array to pass to array_combine
+        // $key_value_pair_array = array($one_point_letter_array, $two_point_letter_array, $three_point_letter_array, $four_point_letter_array,
+        //     $five_point_letter_array, $eight_point_letter_array, $ten_point_letter_array);
+
+        $point_array = array(1, 2, 3, 4, 5, 8 , 10);
+
+        $letter_values = array_combine($point_array, $letters_array);
+        var_dump($letter_values);
+
+        // $this->letter_values = array_fill(0, 5, 0);
+        // array_push($this->letter_values, $five_point_letters);
+        //
+        // BACKUP PLAN, MAKE EACH LETTER HAVE A VALUE SEPARATELY :-(
+        // array_push($this->letter_values, ("K" => 5));
+
+
+    }
+    function getScore($input_string)
+    {
+        // $letter_values = array("A" => 1, "E" => 1, "I" => 1, "O" => 1, "U" => 1, "L" => 1, "N" => 1, "R" => 1,
+        //         "S" => 1, "T" => 1, "D" => 2, "G" => 2, "B" => 3, "C" => 3, "M" => 3, "P" => 3, "F" => 4, "H" => 4,
+        //         "V" => 4, "W" => 4, "Y" => 4, "K" => 5, "J" => 8, "X" => 8, "Q" => 10, "Z" => 10);
+        $word_score = 0;
+        $upper_string = strtoupper($input_string);
+        $input_string_array = str_split($upper_string);
+        //var_dump($input_string_array);
+        $valid_word = 0;
+        //this loop happens for each letter of user input
+        foreach ($input_string_array as $user_letter){
+            //go through main array and get arrays of letters
+            //$letter_to_check = $user_letter;
+
+            foreach ($this->letter_values as $array){
+                if ()
+                    $word_score += array_search($val, $this->letter_values);
+                    ++$valid_word;
+                }
+                else{
+                    $error_message = "You entered an invalid character, please try again.";
+                    return $error_message;
+                }
+
+
+            }
+        }
+        //var_dump($valid_word);
+        //$letters_to_score = explode(" ", strtoupper($inputString));
+        //var_dump($letters_to_score);
+        //$word_score = array_search($letters_to_score, $this->letter_values);
+
+        //$word_score = array_search($input_string, $this->letter_values);
+
+        //check if word length is at least 2 letters
+        if ($valid_word > 1){
+            return $word_score;
+        } else{
+            return "Word is not long enough to score in Scrabble.";
+        }
+    }
+}
+
+?>

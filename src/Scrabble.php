@@ -1,32 +1,6 @@
 <?php
     class Scrabble
     {
-        //array of key (number) value (letter) pairs
-        //public $letter_values = array();
-
-        // function __construct()
-        // {
-            //TRYING TO MAKE A KEY VALUE ARRAY (FAILING)
-
-            // $one_point_letters = array('A', 'E', 'I', 'O', 'U', 'L', 'N', 'R', 'S', 'T');
-            // $two_point_letters = array('D', 'G');
-            // $three_point_letters = array('B', 'C', 'M', 'P');
-            // $four_point_letters = array('F', 'H', 'V', 'W', 'Y');
-            //$five_point_letters = array("K");
-            //$five_point_letter_array = array_fill_keys($five_point_letters, 5);
-
-            // $eight_point_letters = array("J", "X");
-            // $ten_point_Letters = array("Q", "Z");
-
-            //$this->letter_values = array_fill(0, 5, 0);
-            //array_push($this->letter_values, $five_point_letters);
-
-            //BACKUP PLAN, MAKE EACH LETTER HAVE A VALUE SEPARATELY :-(
-            //array_push($this->letter_values, ("K" => 5));
-
-
-        //}
-
         function getScore($input_string)
         {
             $letter_values = array("A" => 1, "E" => 1, "I" => 1, "O" => 1, "U" => 1, "L" => 1, "N" => 1, "R" => 1,
